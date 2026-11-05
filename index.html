@@ -127,6 +127,12 @@ nav ul a:hover{color:var(--text)}
 /* contact */
 .contact{text-align:center}
 .contact .cta{justify-content:center;margin-top:20px}
+.mailrow{margin-top:20px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;color:var(--muted);font-size:.95rem}
+.mailrow #mailText{color:var(--text);font-weight:600}
+.mailrow a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.copy{background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:4px 12px;cursor:pointer;font-size:.85rem}
+.copy:hover{border-color:var(--accent)}
+.copy:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 footer{padding:28px 0;color:var(--muted);text-align:center;font-size:.85rem;border-top:1px solid var(--line)}
 
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
@@ -345,11 +351,16 @@ footer{padding:28px 0;color:var(--muted);text-align:center;font-size:.85rem;bord
     <h2 class="reveal">Let's work together</h2>
     <p class="sub reveal" style="margin-left:auto;margin-right:auto">Hiring for a QA or SDET role, or want to talk testing? Get in touch.</p>
     <div class="cta reveal">
-      <a class="btn primary" href="mailto:abhigyan2055@gmail.com">Email me</a>
+      <a class="btn primary" href="mailto:abhigyan2055@gmail.com?subject=Hello%20Abhigyan%20-%20QA%20opportunity">Email me</a>
       <a class="btn" href="Abhigyan_Shukla_QA_Automation_5Yrs.pdf" download>Download CV</a>
       <a class="btn" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn" href="https://github.com/YOUR-GITHUB" target="_blank" rel="noopener">GitHub</a>
     </div>
+    <p class="mailrow reveal">
+      <span id="mailText">abhigyan2055@gmail.com</span>
+      <button type="button" class="copy" id="copyMail">Copy</button>
+      <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=abhigyan2055@gmail.com&amp;su=Hello%20Abhigyan%20-%20QA%20opportunity" target="_blank" rel="noopener">Open in Gmail</a>
+    </p>
   </div>
 </section>
 
@@ -366,6 +377,23 @@ footer{padding:28px 0;color:var(--muted);text-align:center;font-size:.85rem;bord
     try{localStorage.setItem("theme",next);}catch(e){}
   });
   document.getElementById("yr").textContent=new Date().getFullYear();
+
+  // copy email
+  var copyBtn=document.getElementById("copyMail");
+  copyBtn.addEventListener("click",function(){
+    var text=document.getElementById("mailText").textContent;
+    function done(){copyBtn.textContent="Copied!";setTimeout(function(){copyBtn.textContent="Copy";},1800);}
+    try{
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,fallback);}
+      else{fallback();}
+    }catch(e){fallback();}
+    function fallback(){
+      try{
+        var ta=document.createElement("textarea");ta.value=text;ta.style.position="fixed";ta.style.opacity="0";
+        document.body.appendChild(ta);ta.select();document.execCommand("copy");document.body.removeChild(ta);done();
+      }catch(e){}
+    }
+  });
 
   var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 

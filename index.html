@@ -3,11 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Abhigyan Shukla | Sr. QA Engineer</title>
-<meta name="description" content="Sr. QA Engineer with 5 years of experience in manual and automation testing: Selenium (Java), REST Assured, API automation, payment gateway testing, RabbitMQ and LLM agent testing.">
-<meta property="og:title" content="Abhigyan Shukla | Sr. QA Engineer">
+<title>Abhigyan Shukla | Full Stack QA Engineer</title>
+<meta name="description" content="Full Stack QA Engineer with 5 years of experience across web UI, REST APIs, databases, payments, messaging and CI/CD: Selenium (Java), REST Assured, RabbitMQ and LLM agent testing.">
+<meta property="og:title" content="Abhigyan Shukla | Full Stack QA Engineer">
 <meta property="og:description" content="Selenium (Java) | REST Assured | API Automation | LLM Agent Testing">
 <meta property="og:type" content="website">
+<meta name="theme-color" content="#0b1020">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1020'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='%235eead4' font-family='Arial' font-weight='700'%3EAS%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Abhigyan Shukla","jobTitle":"Full Stack QA Engineer","email":"mailto:abhigyan2055@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Noida","addressCountry":"IN"},"alumniOf":"Guru Gobind Singh Indraprastha University","knowsAbout":["Selenium WebDriver","Java","REST Assured","API Automation","TestNG","Cucumber BDD","Jenkins","RabbitMQ","LLM agent testing"]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -63,7 +68,10 @@ nav ul a:hover{color:var(--text)}
 .hs .lbl{color:var(--muted);font-size:.8rem}
 @media(prefers-reduced-motion:reduce){.badge::before{animation:none}}
 .cta{display:flex;flex-wrap:wrap;gap:12px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.layers{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:28px}
+.layers .lbl{color:var(--muted);font-size:.82rem;margin-right:4px}
+.layers .ly{font-size:.82rem;font-weight:600;padding:5px 12px;border-radius:8px;color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent);border:1px solid color-mix(in srgb,var(--accent) 35%,transparent)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .chip{font-size:.8rem;padding:4px 11px;border-radius:999px;background:var(--card);border:1px solid var(--line);color:var(--muted)}
 
 /* grids/cards */
@@ -135,6 +143,52 @@ nav ul a:hover{color:var(--text)}
 .copy:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 footer{padding:28px 0;color:var(--muted);text-align:center;font-size:.85rem;border-top:1px solid var(--line)}
 
+/* floating buttons */
+.fab-wrap{position:fixed;right:18px;bottom:18px;z-index:40;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.fab{display:inline-flex;align-items:center;gap:9px;border:none;cursor:pointer;font:inherit;font-weight:600;font-size:.92rem;padding:12px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.35);transition:transform .15s;text-decoration:none}
+.fab:hover{transform:translateY(-2px)}
+.fab svg{width:18px;height:18px;flex:none}
+.fab.info{background:var(--card);color:var(--text);border:1px solid var(--line)}
+.fab.wa{background:#22c55e;color:#06260f}
+.fab:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.btn.wa{background:#22c55e;color:#06260f;border:none}
+
+/* details modal */
+.overlay{position:fixed;inset:0;background:rgba(5,8,20,.65);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;z-index:50}
+.overlay.open{opacity:1;visibility:visible}
+.drawer{position:fixed;top:50%;left:50%;width:min(920px,calc(100% - 32px));max-height:calc(100% - 40px);background:var(--bg2);border:1px solid var(--line);border-radius:24px;z-index:60;transform:translate(-50%,-46%) scale(.97);opacity:0;visibility:hidden;transition:transform .3s ease,opacity .25s,visibility .3s;overflow-y:auto;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.drawer.open{transform:translate(-50%,-50%);opacity:1;visibility:visible}
+.close{position:absolute;top:16px;right:16px;z-index:2;background:var(--card);border:1px solid var(--line);color:var(--text);border-radius:999px;width:38px;height:38px;font-size:1.3rem;line-height:1;cursor:pointer}
+.close:hover{border-color:var(--accent)}
+.close:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.pi{display:grid;grid-template-columns:290px 1fr}
+.pi-side{padding:44px 26px 32px;text-align:center;border-right:1px solid var(--line);background:linear-gradient(180deg,color-mix(in srgb,var(--accent2) 14%,transparent),transparent 70%);display:flex;flex-direction:column;align-items:center}
+.avatar{width:112px;height:112px;border-radius:50%;display:grid;place-items:center;font-size:2.4rem;font-weight:700;color:#07101f;background:linear-gradient(135deg,var(--accent),var(--accent2));font-family:"Space Grotesk",Inter,sans-serif;margin-bottom:16px}
+.pi-side h2{font-size:1.45rem;margin:0 0 4px;letter-spacing:-.01em}
+.pi-role{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+.pi-side .badge{margin:0 0 6px}
+.pi-side .actions{width:100%;display:grid;gap:10px;margin-top:20px}
+.pi-side .actions .btn{justify-content:center}
+.pi-main{padding:44px 38px 38px}
+.pi-main h3{font-size:1.2rem;margin-bottom:16px;letter-spacing:-.01em}
+.info-grid{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:34px}
+.info-grid li{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;transition:border-color .2s,transform .2s}
+.info-grid li:hover{border-color:var(--accent);transform:translateY(-2px)}
+.info-grid .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;flex:none;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent)}
+.info-grid .ic svg{width:20px;height:20px}
+.info-grid .k{display:block;font-size:.78rem;color:var(--muted);margin-bottom:2px}
+.info-grid .v{display:block;font-weight:600;font-size:1rem;line-height:1.35}
+.pi-main .about{color:var(--muted);font-size:1rem;line-height:1.75;max-width:60ch}
+@media(max-width:760px){
+  .pi{grid-template-columns:1fr}
+  .pi-side{border-right:none;border-bottom:1px solid var(--line);padding:34px 20px 24px}
+  .pi-main{padding:26px 20px 30px}
+  .info-grid{grid-template-columns:1fr}
+  .drawer{width:100%;top:auto;bottom:0;left:0;max-height:92%;border-radius:24px 24px 0 0;transform:translateY(100%)}
+  .drawer.open{transform:none}
+}
+@media(prefers-reduced-motion:reduce){.drawer,.overlay,.fab,.info-grid li{transition:none}}
+
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){
@@ -154,6 +208,7 @@ footer{padding:28px 0;color:var(--muted);text-align:center;font-size:.85rem;bord
       <li class="hide-sm"><a href="#projects">Projects</a></li>
       <li class="hide-sm"><a href="#impact">Impact</a></li>
       <li class="hide-sm"><a href="#experience">Experience</a></li>
+      <li class="hide-sm"><button type="button" class="theme" data-open-info>Details</button></li>
       <li><a href="#contact">Contact</a></li>
       <li><button class="theme" id="themeBtn" aria-label="Toggle light or dark theme">Theme</button></li>
     </ul>
@@ -164,8 +219,8 @@ footer{padding:28px 0;color:var(--muted);text-align:center;font-size:.85rem;bord
   <div class="wrap">
     <span class="badge">Open to work</span>
     <p class="hello">Hi, I'm <b>Abhigyan</b> &#128075;</p>
-    <h1><span>Sr. QA Engineer</span><br>who automates what matters.</h1>
-    <p class="lead">5 years of manual and automation testing across web and API applications in Agile teams. I build Selenium (Java) frameworks and REST Assured API suites, run them in CI, and test payment flows, RabbitMQ event workflows and LLM agents.</p>
+    <h1><span>Full Stack QA Engineer</span><br>who automates what matters.</h1>
+    <p class="lead">5 years of hands-on quality engineering across the whole stack: web UI, REST APIs, databases, payments, messaging and CI/CD. I build Selenium (Java) and REST Assured frameworks, run them in Jenkins pipelines, and test event-driven systems, WhatsApp integrations and LLM agents.</p>
     <div class="cta">
       <a class="btn primary" href="#impact" id="viewImpact">View impact</a>
       <a class="btn" href="Abhigyan_Shukla_QA_Automation_5Yrs.pdf" download>Download CV</a>
@@ -174,9 +229,13 @@ footer{padding:28px 0;color:var(--muted);text-align:center;font-size:.85rem;bord
       <a class="btn" href="https://github.com/YOUR-GITHUB" target="_blank" rel="noopener">GitHub</a>
     </div>
     <div class="hero-stats">
-      <div class="hs"><div class="num">5 yrs</div><div class="lbl">Manual + automation</div></div>
+      <div class="hs"><div class="num">5 yrs</div><div class="lbl">Full stack QA</div></div>
       <div class="hs"><div class="num">308+</div><div class="lbl">Regression scenarios</div></div>
       <div class="hs"><div class="num">8 h &#8594; 3.5 h</div><div class="lbl">Full regression time</div></div>
+    </div>
+    <div class="layers">
+      <span class="lbl">Tests across</span>
+      <span class="ly">Web UI</span><span class="ly">REST APIs</span><span class="ly">Databases</span><span class="ly">Payments</span><span class="ly">Messaging</span><span class="ly">CI/CD</span><span class="ly">LLM agents</span>
     </div>
     <div class="chips">
       <span class="chip">Selenium WebDriver</span><span class="chip">Java</span><span class="chip">REST Assured</span>
@@ -189,7 +248,7 @@ footer{padding:28px 0;color:var(--muted);text-align:center;font-size:.85rem;bord
 <section id="skills">
   <div class="wrap">
     <h2 class="reveal">Skills</h2>
-    <p class="sub reveal">Manual and automation, from requirement analysis to CI/CD.</p>
+    <p class="sub reveal">Hands-on across the full stack: UI, APIs, data, messaging, AI and CI/CD.</p>
     <div class="grid g3 skill-grid">
       <div class="card reveal">
         <h3>Web Application Automation</h3>
@@ -235,8 +294,8 @@ footer{padding:28px 0;color:var(--muted);text-align:center;font-size:.85rem;bord
         <div class="tags"><span class="tag">Spring AI</span><span class="tag">LLM agents</span><span class="tag">Tool calling</span></div>
       </div>
       <div class="card reveal">
-        <h3>Manual Testing</h3>
-        <p>Solid fundamentals behind every automated suite.</p>
+        <h3>Test Design &amp; Quality Practices</h3>
+        <p>The thinking that decides what is worth automating.</p>
         <ul class="list">
           <li>Requirement analysis, test planning and test case design</li>
           <li>Boundary value analysis and equivalence partitioning</li>
@@ -322,7 +381,7 @@ footer{padding:28px 0;color:var(--muted);text-align:center;font-size:.85rem;bord
 <section id="experience">
   <div class="wrap">
     <h2 class="reveal">Experience</h2>
-    <p class="sub reveal">5 years across manual and automation testing.</p>
+    <p class="sub reveal">5 years of full stack QA across two companies.</p>
     <div class="tl">
       <div class="item reveal">
         <div class="role">Sr. QA Engineer &#183; VFPL &#8211; Finconic</div>
@@ -337,8 +396,8 @@ footer{padding:28px 0;color:var(--muted);text-align:center;font-size:.85rem;bord
         <div class="role">QA Engineer &#183; YPL Infotech</div>
         <div class="when">Nov 2021 &#8211; June 2024 &#183; Noida</div>
         <ul>
-          <li>Manual functional, regression, smoke and exploratory testing across sprint releases.</li>
-          <li>Converted regression scenarios to Selenium + TestNG automation.</li>
+          <li>Built Selenium + TestNG automation for regression scenarios, replacing repetitive manual runs.</li>
+          <li>Functional, smoke and exploratory testing across sprint releases.</li>
           <li>SQL database validation and defect tracking in JIRA.</li>
         </ul>
       </div>
@@ -352,6 +411,7 @@ footer{padding:28px 0;color:var(--muted);text-align:center;font-size:.85rem;bord
     <p class="sub reveal" style="margin-left:auto;margin-right:auto">Hiring for a QA or SDET role, or want to talk testing? Get in touch.</p>
     <div class="cta reveal">
       <a class="btn primary" href="mailto:abhigyan2055@gmail.com?subject=Hello%20Abhigyan%20-%20QA%20opportunity">Email me</a>
+      <a class="btn wa" href="https://wa.me/919990872055?text=Hello%20Abhigyan%2C%20I%20am%20hiring%20for%20a%20role%20that%20might%20be%20suitable%20for%20you.%20Let%27s%20discuss%20this." target="_blank" rel="noopener">WhatsApp me</a>
       <a class="btn" href="Abhigyan_Shukla_QA_Automation_5Yrs.pdf" download>Download CV</a>
       <a class="btn" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn" href="https://github.com/YOUR-GITHUB" target="_blank" rel="noopener">GitHub</a>
@@ -363,6 +423,49 @@ footer{padding:28px 0;color:var(--muted);text-align:center;font-size:.85rem;bord
     </p>
   </div>
 </section>
+
+<div class="fab-wrap">
+  <button type="button" class="fab info" data-open-info aria-haspopup="dialog">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+    About me
+  </button>
+  <a class="fab wa" href="https://wa.me/919990872055?text=Hello%20Abhigyan%2C%20I%20am%20hiring%20for%20a%20role%20that%20might%20be%20suitable%20for%20you.%20Let%27s%20discuss%20this." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<div class="overlay" id="infoOverlay"></div>
+<aside class="drawer" id="infoDrawer" role="dialog" aria-modal="true" aria-labelledby="infoTitle" aria-hidden="true">
+  <button type="button" class="close" id="closeInfo" aria-label="Close details">&#215;</button>
+  <div class="pi">
+    <div class="pi-side">
+      <div class="avatar" aria-hidden="true">AS</div>
+      <h2 id="infoTitle">Abhigyan Shukla</h2>
+      <p class="pi-role">Full Stack QA Engineer</p>
+      <span class="badge">Open to work</span>
+      <div class="actions">
+        <a class="btn wa" href="https://wa.me/919990872055?text=Hello%20Abhigyan%2C%20I%20am%20hiring%20for%20a%20role%20that%20might%20be%20suitable%20for%20you.%20Let%27s%20discuss%20this." target="_blank" rel="noopener">Message on WhatsApp</a>
+        <a class="btn primary" href="mailto:abhigyan2055@gmail.com?subject=Hello%20Abhigyan%20-%20QA%20opportunity">Send an email</a>
+        <a class="btn" href="Abhigyan_Shukla_QA_Automation_5Yrs.pdf" download>Download CV</a>
+      </div>
+    </div>
+    <div class="pi-main">
+      <h3>Personal info</h3>
+      <ul class="info-grid">
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><span class="k">Currently based in</span><span class="v">Noida, India</span></span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span><span><span class="k">Born and grew up in</span><span class="v">Delhi</span></span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4"/><path d="M5 4h12l-2 4 2 4H5"/></svg></span><span><span class="k">Native place</span><span class="v">Lucknow, Amethi</span></span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12l20-8-7 18-3-7-7-3z"/></svg></span><span><span class="k">Where I have always wanted to go</span><span class="v">Sweden</span></span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.6-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.4-7 10-7 10z"/></svg></span><span><span class="k">I love</span><span class="v">Travelling, activities and challenges</span></span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></span><span><span class="k">I love speaking</span><span class="v">Spanish</span></span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2"/></svg></span><span><span class="k">Preferred work location</span><span class="v">YOUR-PREFERRED-LOCATIONS</span></span></li>
+      </ul>
+      <h3>About me</h3>
+      <p class="about">I am a Full Stack QA Engineer with 5 years of hands-on experience across web UI, REST APIs, databases, payments, messaging and LLM agents. I build automation that teams can rely on, from Selenium and REST Assured frameworks to Jenkins pipelines. I was born and raised in Delhi, with roots in Lucknow, Amethi. Outside work I love to travel, I take part in all kinds of activities and challenges, and I love speaking Spanish. Sweden is the place I have always wanted to go.</p>
+    </div>
+  </div>
+</aside>
 
 <footer>&#169; <span id="yr"></span> Abhigyan Shukla &#183; Noida, India</footer>
 
@@ -393,6 +496,28 @@ footer{padding:28px 0;color:var(--muted);text-align:center;font-size:.85rem;bord
         document.body.appendChild(ta);ta.select();document.execCommand("copy");document.body.removeChild(ta);done();
       }catch(e){}
     }
+  });
+
+  // details drawer
+  var drawer=document.getElementById("infoDrawer"),overlay=document.getElementById("infoOverlay"),lastFocus=null;
+  function openInfo(){
+    lastFocus=document.activeElement;
+    drawer.classList.add("open");overlay.classList.add("open");
+    drawer.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";
+    document.getElementById("closeInfo").focus();
+  }
+  function closeInfo(){
+    drawer.classList.remove("open");overlay.classList.remove("open");
+    drawer.setAttribute("aria-hidden","true");document.body.style.overflow="";
+    if(lastFocus&&lastFocus.focus)lastFocus.focus();
+  }
+  document.querySelectorAll("[data-open-info]").forEach(function(b){b.addEventListener("click",openInfo);});
+  document.getElementById("closeInfo").addEventListener("click",closeInfo);
+  overlay.addEventListener("click",closeInfo);
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&drawer.classList.contains("open"))closeInfo();});
+  // hide any detail row that still has an unfilled YOUR-... placeholder
+  document.querySelectorAll(".info-grid .v").forEach(function(v){
+    if(/^YOUR-/.test(v.textContent.trim()))v.closest("li").style.display="none";
   });
 
   var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
